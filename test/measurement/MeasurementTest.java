@@ -6,6 +6,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import static junit.framework.Assert.assertTrue;
 import static junit.framework.TestCase.assertEquals;
 
 public class MeasurementTest {
@@ -16,7 +17,7 @@ public class MeasurementTest {
     public void one_feet_should_be_equalsTo_twelve_inches() throws  InvalidComparisonException {
         Measurement feet= new Measurement(UnitsOfLength.FEET,2);
         Measurement inch = new Measurement( UnitsOfLength.INCH,24.0);
-        assertEquals(feet.compare(inch) ,true);
+        assertTrue(feet.compare(inch));
     }
     @Test
     public void one_inch_should_be_equalsTo_five_cm() throws InvalidComparisonException {
